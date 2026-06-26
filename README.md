@@ -198,9 +198,36 @@ Certificate analysis helps determine:
 
 # Part II: Network Capture Investigation
 
-## Objective
+Download the example capture file "ekot96.pcap"
 
-Analyze a provided packet capture file and identify evidence related to network activity.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ed0713a2-2af6-4133-b993-ced09ccb9276" />
+
+1. Password:
+   0kThXBi@
+
+2. IP address of example.target.tgt:
+   10.10.10.2
+
+3. Browser:
+   Mozilla/4.0
+
+4. Port 22 open on 10.10.10.2:
+   Yes. SSH traffic is visible between 10.10.10.4 and 10.10.10.2, including SSH protocol banners indicating an active SSH service.
+
+5. Primary domain:
+   example.target.tgt
+
+6. Source IP for sidenav.gif:
+   10.10.10.3
+
+7. IP address associated with NIC 00:0c:29:b0:f9:31:
+   10.10.10.3
+
+8. Username:
+   petergriffin
+
+
+
 
 ---
 
