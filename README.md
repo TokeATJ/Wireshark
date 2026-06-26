@@ -4,7 +4,7 @@
 
 ## 📖 Overview
 
-## The IP andress have been sanitized
+## The IP andresses have been sanitized
 
 This project demonstrates foundational network security concepts through hands-on analysis of TCP/IP communications, HTTP methods, packet captures, and encrypted communications using Kali Linux, Wireshark, Netcat, and OpenSSL. 
 
@@ -70,8 +70,10 @@ Network traffic was captured using Wireshark while manually interacting with web
 ### Connect to Google
 
 ```bash
-nc www.google.com 80
+nc www.example.edu 80
 ```
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/4ff519d2-8f93-45a7-9d3c-4bb52ea319ff" />
+
 
 ### Send HEAD Request
 
@@ -81,7 +83,8 @@ HEAD / HTTP/1.1
 
 ### Evidence
 
-![HTTP HEAD Request](screenshots/http-head-request.png)
+<img width="1537" height="1023" alt="image" src="https://github.com/user-attachments/assets/5a7a9f55-c395-43d4-b094-b03ed539df19" />
+
 
 ---
 
@@ -97,6 +100,7 @@ The packet capture demonstrated the establishment of a TCP connection through th
 
 ### Security Relevance
 
+
 Understanding the TCP handshake is essential for:
 
 - Network troubleshooting
@@ -106,8 +110,9 @@ Understanding the TCP handshake is essential for:
 
 ### Evidence
 
-![TCP Handshake](screenshots/tcp-handshake.png)
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9fb63574-60d7-4486-9ace-b82c31e9cc71" />
 
+The first three packet start with SYN message being sent from the client to the server. Once the initial SYN message is received it sends back the ACK/SYN message to the client to communicate it has acknowledged the original packet. Once they are received by the client, another ACK packet is sent to the server. This characterizes the three way handshake to create a connection. 
 ---
 
 ## Web Server Fingerprinting
