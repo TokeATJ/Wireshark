@@ -1,4 +1,6 @@
 # Wireshark
+<img width="1983" height="793" alt="image" src="https://github.com/user-attachments/assets/ed87f67d-8864-44bc-a571-e2888606bb30" />
+
 
 # 🌐 TCP/IP Protocol Analysis and Network Traffic Inspection
 
