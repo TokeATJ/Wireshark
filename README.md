@@ -112,7 +112,7 @@ Understanding the TCP handshake is essential for:
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9fb63574-60d7-4486-9ace-b82c31e9cc71" />
 
-The first three packet start with SYN message being sent from the client to the server. Once the initial SYN message is received it sends back the ACK/SYN message to the client to communicate it has acknowledged the original packet. Once they are received by the client, another ACK packet is sent to the server. This characterizes the three way handshake to create a connection. 
+- The first three packet start with SYN message being sent from the client to the server. Once the initial SYN message is received it sends back the ACK/SYN message to the client to communicate it has acknowledged the original packet. Once they are received by the client, another ACK packet is sent to the server. This characterizes the three way handshake to create a connection. 
 ---
 
 ## Web Server Fingerprinting
@@ -121,12 +121,12 @@ A HEAD request was submitted to identify the underlying web server software.
 
 ### Target
 
-www.tappware.com
+www.example-target.com
 
 ### Result
 
 ```text
-Apache/2.4.6 (CentOS)
+Apache/ (CentOS)
 ```
 
 ### Security Relevance
@@ -140,7 +140,7 @@ Web server fingerprinting helps identify:
 
 ### Evidence
 
-![Server Identification](screenshots/server-identification.png)
+<img width="1392" height="1130" alt="image" src="https://github.com/user-attachments/assets/03342b50-f9fe-4a76-be6e-47593ffe7dca" />
 
 ---
 
