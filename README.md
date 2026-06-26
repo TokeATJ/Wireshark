@@ -239,7 +239,7 @@ Download the example capture file "ekot96.pcap"
 - Port Status Verification
 - Domain Enumeration
 - Host Identification
--
+- Network Traffic Reconstruction
 
 ---
 
@@ -265,10 +265,6 @@ Packet analysis enables security professionals to:
 - Recover cleartext credentials
 - Validate network configurations
 - Identify suspicious communications
-
-### Evidence
-
-![Packet Capture Analysis](screenshots/network-capture-analysis.png)
 
 ---
 
