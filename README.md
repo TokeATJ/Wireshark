@@ -152,7 +152,7 @@ The OPTIONS method was used to determine supported HTTP methods on the target we
 
 ```http
 OPTIONS / HTTP/1.1
-Host: www.tappware.com
+Host: www.example-target.com
 ```
 
 ### Security Relevance
@@ -161,7 +161,7 @@ OPTIONS responses can expose functionality available on the server and reveal me
 
 ### Evidence
 
-![HTTP OPTIONS Enumeration](screenshots/http-options.png)
+<img width="1825" height="862" alt="image" src="https://github.com/user-attachments/assets/e004069d-054c-44a4-9f58-485d13964e2b" />
 
 ---
 
@@ -172,7 +172,7 @@ Encrypted communications were analyzed using OpenSSL.
 ### Command
 
 ```bash
-openssl s_client -connect cseview.kennesaw.edu:443
+openssl s_client -connect example-target.edu:443
 ```
 
 ### Findings
@@ -190,7 +190,9 @@ Certificate analysis helps determine:
 
 ### Evidence
 
-![SSL Certificate Analysis](screenshots/ssl-certificate-analysis.png)
+<img width="1840" height="854" alt="image" src="https://github.com/user-attachments/assets/6717a642-33d0-4880-b746-787d8cb5f892" />
+
+<img width="1403" height="1121" alt="image" src="https://github.com/user-attachments/assets/e143f5aa-1697-43c5-9b8b-8230fcf80f2e" />
 
 ---
 
@@ -210,7 +212,7 @@ Analyze a provided packet capture file and identify evidence related to network 
 - Port Status Verification
 - Domain Enumeration
 - Host Identification
-- User Activity Reconstruction
+-
 
 ---
 
