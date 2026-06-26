@@ -194,6 +194,7 @@ Certificate analysis helps determine:
 
 <img width="1403" height="1121" alt="image" src="https://github.com/user-attachments/assets/e143f5aa-1697-43c5-9b8b-8230fcf80f2e" />
 
+- The HTTP OPTIONS method is important because it reveals which HTTP methods a web server supports. During penetration testing, this information helps identify the server's attack surface and can expose potentially dangerous methods such as PUT, DELETE, or TRACE that may be misconfigured. The length of the public key is important because it directly impacts the strength of the encryption used to protect communications. Larger key sizes generally require more computational effort to break, making encrypted communications more resistant to attacks. Reviewing key length helps determine whether a system meets current security best practices and compliance requirements.
 ---
 
 # Part II: Network Capture Investigation
