@@ -1,1 +1,270 @@
 # Wireshark
+
+# 🌐 TCP/IP Protocol Analysis and Network Traffic Inspection
+
+## 📖 Overview
+
+## The IP andress have been sanitized
+
+This project demonstrates foundational network security concepts through hands-on analysis of TCP/IP communications, HTTP methods, packet captures, and encrypted communications using Kali Linux, Wireshark, Netcat, and OpenSSL. 
+
+The objective was to understand how network communications occur, inspect protocol behavior, identify web server configurations, and analyze captured network traffic for investigative purposes.
+
+---
+
+## 🛠️ Tools Used
+
+- Kali Linux
+- Wireshark
+- Netcat (nc)
+- OpenSSL
+- TCP/IP
+- HTTP Protocol
+- DNS
+
+---
+
+## 🎯 Skills Demonstrated
+
+- Packet Analysis
+- Protocol Inspection
+- HTTP Method Enumeration
+- TCP Three-Way Handshake Analysis
+- DNS Analysis
+- SSL/TLS Inspection
+- Traffic Forensics
+- Network Reconnaissance
+- Security Assessment
+
+---
+
+# Part I: HTTP Protocol Analysis
+
+## Objective
+
+Investigate HTTP communications and analyze client-server interactions using Wireshark packet captures.
+
+---
+
+## HTTP Methods Examined
+
+| Method | Purpose |
+|----------|----------|
+| HEAD | Retrieve headers without content |
+| GET | Retrieve resources |
+| OPTIONS | Discover supported methods |
+| POST | Submit data |
+| PUT | Update resources |
+| DELETE | Remove resources |
+
+### Security Relevance
+
+HTTP methods can reveal application functionality and potential attack surfaces. During penetration testing, unsupported or insecure methods may indicate misconfigurations.
+
+---
+
+## Capturing HTTP Traffic
+
+Network traffic was captured using Wireshark while manually interacting with web servers through Netcat.
+
+### Connect to Google
+
+```bash
+nc www.google.com 80
+```
+
+### Send HEAD Request
+
+```http
+HEAD / HTTP/1.1
+```
+
+### Evidence
+
+![HTTP HEAD Request](screenshots/http-head-request.png)
+
+---
+
+## TCP Three-Way Handshake Analysis
+
+The packet capture demonstrated the establishment of a TCP connection through the standard three-way handshake process.
+
+### Packet Sequence
+
+1. SYN
+2. SYN-ACK
+3. ACK
+
+### Security Relevance
+
+Understanding the TCP handshake is essential for:
+
+- Network troubleshooting
+- Intrusion detection
+- Packet analysis
+- Penetration testing
+
+### Evidence
+
+![TCP Handshake](screenshots/tcp-handshake.png)
+
+---
+
+## Web Server Fingerprinting
+
+A HEAD request was submitted to identify the underlying web server software.
+
+### Target
+
+www.tappware.com
+
+### Result
+
+```text
+Apache/2.4.6 (CentOS)
+```
+
+### Security Relevance
+
+Web server fingerprinting helps identify:
+
+- Software versions
+- Potential vulnerabilities
+- Patch management concerns
+- Attack surface information
+
+### Evidence
+
+![Server Identification](screenshots/server-identification.png)
+
+---
+
+## HTTP OPTIONS Enumeration
+
+The OPTIONS method was used to determine supported HTTP methods on the target web server.
+
+### Request
+
+```http
+OPTIONS / HTTP/1.1
+Host: www.tappware.com
+```
+
+### Security Relevance
+
+OPTIONS responses can expose functionality available on the server and reveal methods that may increase risk.
+
+### Evidence
+
+![HTTP OPTIONS Enumeration](screenshots/http-options.png)
+
+---
+
+## SSL/TLS Certificate Analysis
+
+Encrypted communications were analyzed using OpenSSL.
+
+### Command
+
+```bash
+openssl s_client -connect cseview.kennesaw.edu:443
+```
+
+### Findings
+
+Certificate details and public key length were reviewed to assess encryption strength.
+
+### Security Relevance
+
+Certificate analysis helps determine:
+
+- Encryption strength
+- Key length
+- Certificate validity
+- Compliance readiness
+
+### Evidence
+
+![SSL Certificate Analysis](screenshots/ssl-certificate-analysis.png)
+
+---
+
+# Part II: Network Capture Investigation
+
+## Objective
+
+Analyze a provided packet capture file and identify evidence related to network activity.
+
+---
+
+## Activities Performed
+
+- Credential Analysis
+- DNS Resolution Review
+- Browser Identification
+- Port Status Verification
+- Domain Enumeration
+- Host Identification
+- User Activity Reconstruction
+
+---
+
+## Investigation Findings
+
+| Investigation Item | Result |
+|--------------------|---------|
+| DNS Resolution | Identified target host mappings |
+| Browser Analysis | Determined user-agent information |
+| Port Verification | Confirmed service availability |
+| Network Attribution | Mapped MAC addresses to hosts |
+| Authentication Analysis | Reviewed credential transmission |
+| Traffic Reconstruction | Reconstructed user activity |
+
+---
+
+## Security Relevance
+
+Packet analysis enables security professionals to:
+
+- Investigate incidents
+- Trace attacker activity
+- Recover cleartext credentials
+- Validate network configurations
+- Identify suspicious communications
+
+### Evidence
+
+![Packet Capture Analysis](screenshots/network-capture-analysis.png)
+
+---
+
+# 📚 Key Takeaways
+
+- Captured and analyzed HTTP traffic
+- Investigated TCP connection establishment
+- Identified web server technologies
+- Enumerated supported HTTP methods
+- Performed SSL/TLS certificate inspection
+- Conducted packet capture analysis using Wireshark
+- Reconstructed network activity from packet captures
+
+---
+
+# 💡 Skills Gained
+
+- Kali Linux
+- Wireshark
+- Netcat
+- OpenSSL
+- HTTP Analysis
+- DNS Analysis
+- TCP/IP Fundamentals
+- Packet Inspection
+- Network Forensics
+- Security Assessment
+
+---
+
+# 🎓 Resume Alignment
+
+> Performed TCP/IP protocol analysis, HTTP method enumeration, SSL/TLS inspection, and packet capture investigations using Kali Linux, Wireshark, Netcat, and OpenSSL to assess network communications and identify security-relevant information.
